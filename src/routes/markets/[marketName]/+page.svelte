@@ -11,7 +11,7 @@
 		<h1>{market.market_name}</h1>
 		<p>{market.market_description}</p>
 
-		<h2>Reviews</h2>
+		<h2>리뷰</h2>
 		<ul>
 			{#each market.reviews as review}
 				<li>{review}</li>
@@ -21,7 +21,7 @@
 		<p>Market not found</p>
 	{/if}
 
-	<a href="/markets">Back to Markets</a>
+	<a href="/markets">가게 페이지로 돌아가기</a>
 </div>
 
 <style>

@@ -18,7 +18,7 @@
 </script>
 
 <div>
-	<h1>Create Your Market Course</h1>
+	<h1 class="fixed-header">코스</h1>
 
 	<MarketSelector markets={$markets} bind:selectedMarkets on:change={updatePath} />
 
@@ -32,7 +32,8 @@
 			{/each}
 		</ol>
 	{:else}
-		<p>Please select at least two markets to create a course.</p>
+		<p>2개 이상의 가게를 선택해주세요</p>
+		<p>현재 선택된 가게 개수: {selectedMarkets.length}</p>
 	{/if}
 </div>
 
@@ -46,6 +47,20 @@
 		align-items: center;
 		overflow-y: auto;
 	}
+
+	.fixed-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: white;
+		text-align: center;
+		padding: 10px 0;
+		z-index: 1000;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		margin: 0;
+	}
+
 	h1,
 	h2 {
 		text-align: center;

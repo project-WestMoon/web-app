@@ -19,8 +19,8 @@
 
 <nav>
 	<div class="nav-container">
-		<a href="/markets" class:active={$page.url.pathname.includes('/markets')}>Markets</a>
-		<a href="/course" class:active={$page.url.pathname.includes('/course')}>Course</a>
+		<a href="/markets" class:active={$page.url.pathname.includes('/markets')}>가게</a>
+		<a href="/course" class:active={$page.url.pathname.includes('/course')}>코스</a>
 		<a href="/facilities" class:active={$page.url.pathname.includes('/facilities')}>편의시설</a>
 	</div>
 </nav>

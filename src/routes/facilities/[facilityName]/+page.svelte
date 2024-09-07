@@ -6,13 +6,13 @@
 <div>
     {#if $page.params.facilityName == "restroom"}
 		<h1>근처 화장실</h1>
-		<p>좌측 300m</p>
+		<p>좌측으로 300m</p>
 	{:else if $page.params.facilityName == "park"}
     <h1>근처 주차장</h1>
-    <p>우측 150m</p>
+    <p>우측으로 150m</p>
 	{/if}
 
-	<a href="/facilities">Back to 편의시설</a>
+	<a href="/facilities">편의시설 페이지로 돌아가기</a>
 </div>
 
 <style>

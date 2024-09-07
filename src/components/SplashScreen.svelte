@@ -7,13 +7,13 @@
 	onMount(() => {
 		setTimeout(() => {
 			visible = false;
-		}, 1);
+		}, 1000);
 	});
 </script>
 
 {#if visible}
 	<div class="splash-screen" transition:fade>
-		<h1>서문</h1>
+		<h1>서문시장</h1>
 	</div>
 {/if}
 

@@ -4,7 +4,7 @@
 </script>
 
 <div class="markets-container">
-	<h1 class="fixed-header">Markets</h1>
+	<h1 class="fixed-header">가게</h1>
 	<div class="market-list">
 		{#each $markets as market}
 			<a href="/markets/{market.market_name}">
