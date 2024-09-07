@@ -44,6 +44,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		overflow-y: auto;
 	}
 	h1,
 	h2 {
