@@ -1,10 +1,11 @@
 export function calculateOptimalPath(markets) {
-	// Select a subset of markets (e.g., 5 random markets)
-	const selectedMarkets = markets.sort(() => 0.5 - Math.random()).slice(0, 5);
+	if (markets.length <= 1) {
+		return markets;
+	}
 
-	// Simplified nearest neighbor algorithm
-	const path = [selectedMarkets[0]];
-	const unvisited = selectedMarkets.slice(1);
+	// Start with the first market
+	const path = [markets[0]];
+	const unvisited = markets.slice(1);
 
 	while (unvisited.length > 0) {
 		const current = path[path.length - 1];
