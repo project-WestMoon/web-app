@@ -1,6 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
 	import { fireAlert, closeFireAlert } from '$lib/stores/fireAlert';
+	import { onMount } from 'svelte';
 
 	let modalElement;
 
@@ -19,16 +19,16 @@
 
 {#if $fireAlert}
 	<div
-		class="modal-backdrop"
-		on:keydown={handleKeydown}
+		bind:this={modalElement}
 		role="dialog"
 		aria-modal="true"
 		tabindex="-1"
-		bind:this={modalElement}
+		class="modal-backdrop"
+		on:keydown={handleKeydown}
 	>
 		<div class="modal-content">
-			<h2 id="modal-title">화재 경보</h2>
-			<p id="modal-description">화재가 감지되었습니다. 신속히 대피하세요!</p>
+			<h2>화재 경보</h2>
+			<p>화재가 감지되었습니다. 신속히 대피하세요!</p>
 			<button on:click={closeFireAlert}>확인</button>
 		</div>
 	</div>

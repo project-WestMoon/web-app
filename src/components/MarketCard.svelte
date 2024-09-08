@@ -1,11 +1,15 @@
 <script>
 	export let name;
 	export let description;
+	export let thumb;
 </script>
 
 <div class="market-card">
-	<h2>{name}</h2>
-	<p>{description}</p>
+	<img src={thumb} alt="" />
+	<div>
+		<h2>{name}</h2>
+		<p>{description}</p>
+	</div>
 </div>
 
 <style>
@@ -18,6 +22,10 @@
 		margin-bottom: 16px;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 
 	.market-card:hover {
@@ -30,5 +38,14 @@
 
 	p {
 		margin: 0;
+	}
+
+	img {
+		width: 80px;
+		height: 80px;
+		object-fit: cover;
+		border-radius: 10px;
+
+		margin-right: 20px;
 	}
 </style>

@@ -8,7 +8,8 @@
 	<div class="market-list">
 		{#each $markets as market}
 			<a href="/markets/{market.market_name}">
-				<MarketCard name={market.market_name} description={market.market_description} />
+				<!-- <img class="thumb" src={market.thumb} alt=""> -->
+				<MarketCard name={market.market_name} description={market.market_description} thumb={market.thumb}/>
 			</a>
 		{/each}
 	</div>
